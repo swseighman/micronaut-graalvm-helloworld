@@ -53,6 +53,11 @@ Build a container image, make certain the docker daemon service is running (or u
 $ ./docker-build-jvm.sh
 ```
 
+```bash
+$ curl http://localhost:8080/randomplay
+{"name":"GraalVM Rocks!"}
+```
+
 ### Deploying a native image inside a container
 
 With this approach you only need to build the fat jar and then use Docker/Podman to build the native image.
@@ -61,6 +66,11 @@ Then build a container image, make certain the docker daemon service is running 
 
 ```bash
 $ ./docker-build.sh
+```
+
+```bash
+$ curl http://localhost:8080/randomplay
+{"name":"Java Rocks!"}
 ```
 
 
