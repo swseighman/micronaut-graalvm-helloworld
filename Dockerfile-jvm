@@ -1,0 +1,6 @@
+FROM frolvlad/alpine-glibc
+RUN apk update && apk add libstdc++
+RUN apk --no-cache add openjdk11 --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
+EXPOSE 8080
+COPY target/micronaut-graalvm-helloworld-0.1.jar micronaut-graalvm-helloworld-0.1.jar
+CMD ["java","-jar","micronaut-graalvm-helloworld-0.1.jar"]
