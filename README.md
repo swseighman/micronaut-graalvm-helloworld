@@ -56,7 +56,7 @@ Start the container:
 
 ```bash
 $ docker run -p 8080:8080 helloworld-graal-jvm
-/app/micronaut-graalvm-helloworld: /usr/lib/libstdc++.so.6: no version information available (required by /app/micronaut-graalvm-helloworld)
+19:58:42.934 [main] INFO  io.micronaut.runtime.Micronaut - Startup completed in 642ms. Server Running: http://9c1ab24b58df:8080
 ```
 
 ```bash
@@ -78,6 +78,7 @@ Start the container:
 ```bash
 $ docker run -p 8080:8080 helloworld-graal
 /app/micronaut-graalvm-helloworld: /usr/lib/libstdc++.so.6: no version information available (required by /app/micronaut-graalvm-helloworld)
+15:34:41.145 [main] INFO  io.micronaut.runtime.Micronaut - Startup completed in 56ms. Server Running: http://aa22eb808a30:8080
 ```
 
 ```bash
