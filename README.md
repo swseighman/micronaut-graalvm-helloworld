@@ -52,6 +52,12 @@ Build a container image, make certain the docker daemon service is running (or u
 ```bash
 $ ./docker-build-jvm.sh
 ```
+Start the container:
+
+```bash
+$ docker run -p 8080:8080 helloworld-graal-jvm
+/app/micronaut-graalvm-helloworld: /usr/lib/libstdc++.so.6: no version information available (required by /app/micronaut-graalvm-helloworld)
+```
 
 ```bash
 $ curl http://localhost:8080/randomplay
@@ -67,10 +73,23 @@ Then build a container image, make certain the docker daemon service is running 
 ```bash
 $ ./docker-build.sh
 ```
+Start the container:
+
+```bash
+$ docker run -p 8080:8080 helloworld-graal
+/app/micronaut-graalvm-helloworld: /usr/lib/libstdc++.so.6: no version information available (required by /app/micronaut-graalvm-helloworld)
+```
 
 ```bash
 $ curl http://localhost:8080/randomplay
 {"name":"Java Rocks!"}
+```
+
+```bash
+$ docker images
+REPOSITORY                               TAG                       IMAGE ID       CREATED             SIZE
+helloworld-graal                         latest                    3779528da123   12 minutes ago      83.1MB
+helloworld-graal-jvm                     latest                    ae6f8aea4300   45 minutes ago      300MB
 ```
 
 
