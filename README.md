@@ -5,7 +5,7 @@ Creating your first Micronaut GraalVM application
 Next, we'll learn how to create a Hello World Micronaut GraalVM application. To get started, clone the git repository:
 
 ```bash
-$ $ git clone https://github.com/swseighman/micronaut-graalvm-helloworld.git
+$ git clone https://github.com/swseighman/micronaut-graalvm-helloworld.git
 ```
 
 Change directory to the `micronaut-graalvm-helloworld` subdirectory within the cloned repo:
