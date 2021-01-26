@@ -102,8 +102,8 @@ $ curl http://localhost:8080/randomplay
 ```bash
 $ docker images
 REPOSITORY                               TAG                       IMAGE ID       CREATED             SIZE
-helloworld-graal                         latest                    3779528da123   12 minutes ago      83.1MB
-helloworld-graal-jvm                     latest                    ae6f8aea4300   45 minutes ago      300MB
+micronaut-graalvm-helloworld            graalvm                    3779528da123   12 minutes ago      83.1MB
+micronaut-graalvm-helloworld            jvm                        ae6f8aea4300   45 minutes ago      300MB
 ```
 
 
