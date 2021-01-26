@@ -15,7 +15,7 @@ $ cd micronaut-graalvm-helloworld
 ```bash
 $ ./mvnw package
 ```
-You can run either the JAR or native-image version:
+You can now run the `jar` version from the `target` directory:
 
 **JAR:**
 
@@ -29,8 +29,30 @@ In a separate terminal, send a request to the service:
 $ curl http://localhost:8080/randomplay
 {"name":"Java Rules!"}
 ```
+Next, let's build a native image of our application.
 
-**native-image:**
+Edit the `pom.xml` file and uncomment the Graal dependency (lines 93-98) and the Graal plugin (lines 125-147).
+
+Package the application:
+
+```bash
+$ ./mvnw package
+...
+[micronaut-graalvm-helloworld:12406]     (inline):   2,971.36 ms,  5.62 GB
+[micronaut-graalvm-helloworld:12406]    (compile):  49,922.64 ms,  6.91 GB
+[micronaut-graalvm-helloworld:12406]      compile:  61,715.08 ms,  6.91 GB
+[micronaut-graalvm-helloworld:12406]        image:   4,883.90 ms,  6.91 GB
+[micronaut-graalvm-helloworld:12406]        write:     760.46 ms,  6.91 GB
+[micronaut-graalvm-helloworld:12406]      [total]: 113,450.38 ms,  6.91 GB
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:58 min
+[INFO] Finished at: 2021-01-26T11:09:38-05:00
+[INFO] ------------------------------------------------------------------------
+```
+
+Now run the native image version:
 
 ```bash
 $ target/micronaut-graalvm-helloworld

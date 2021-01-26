@@ -90,6 +90,12 @@
       <artifactId>micronaut-test-junit5</artifactId>
       <scope>test</scope>
     </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.graalvm.sdk</groupId>-->
+<!--      <artifactId>graal-sdk</artifactId>-->
+<!--      <version>21.0.0</version>-->
+<!--      <scope>provided</scope>-->
+<!--    </dependency>-->
   </dependencies>
 
   <build>
@@ -116,7 +122,29 @@
           </compilerArgs>
         </configuration>
       </plugin>
+<!--      <plugin>-->
+<!--        <groupId>org.graalvm.nativeimage</groupId>-->
+<!--        <artifactId>native-image-maven-plugin</artifactId>-->
+<!--        <version>21.0.0</version>-->
+<!--        <executions>-->
+<!--            <execution>-->
+<!--                <goals>-->
+<!--                    <goal>native-image</goal>-->
+<!--                </goals>-->
+<!--                <phase>package</phase>-->
+<!--            </execution>-->
+<!--        </executions>-->
+<!--        <configuration>-->
+<!--            <skip>false</skip>-->
+<!--            <imageName>micronaut-graalvm-helloworld</imageName>-->
+<!--            <buildArgs>-->
+<!--              &#45;&#45;no-fallback-->
+<!--              &#45;&#45;no-server-->
+<!--              &#45;&#45;report-unsupported-elements-at-runtime-->
+<!--              &#45;&#45;allow-incomplete-classpath-->
+<!--            </buildArgs> -->
+<!--        </configuration>-->
+<!--      </plugin>-->
     </plugins>
   </build>
-
 </project>
