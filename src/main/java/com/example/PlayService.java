@@ -13,7 +13,8 @@ public class PlayService {
             new Play("Happy New Year!"),
             new Play("Micronaut & GraalVM"),
             new Play("Java Rules!"),
-            new Play("Maven or Gradle?")
+            new Play("Maven or Gradle?"),
+            new Play("GraalVM Rocks!")
     );
     // to choose random play from PLAYS list
     public Play randomPlay() {

@@ -55,8 +55,15 @@ $ ./docker-build-jvm.sh
 Start the container:
 
 ```bash
-$ docker run -p 8080:8080 helloworld-graal-jvm
-19:58:42.934 [main] INFO  io.micronaut.runtime.Micronaut - Startup completed in 642ms. Server Running: http://9c1ab24b58df:8080
+$ docker run -p 8080:8080 micronaut-graalvm-helloworld:jvm
+ __  __ _                                  _
+|  \/  (_) ___ _ __ ___  _ __   __ _ _   _| |_
+| |\/| | |/ __| '__/ _ \| '_ \ / _` | | | | __|
+| |  | | | (__| | | (_) | | | | (_| | |_| | |_
+|_|  |_|_|\___|_|  \___/|_| |_|\__,_|\__,_|\__|
+  Micronaut (v2.3.0)
+
+13:03:15.921 [main] INFO  io.micronaut.runtime.Micronaut - Startup completed in 656ms. Server Running: http://999bd40b5e54:8080
 ```
 
 ```bash
@@ -71,14 +78,20 @@ With this approach you only need to build the fat jar and then use Docker/Podman
 Then build a container image, make certain the docker daemon service is running (or use `podman`).
 
 ```bash
-$ ./docker-build.sh
+$ ./docker-build-native.sh
 ```
 Start the container:
 
 ```bash
-$ docker run -p 8080:8080 helloworld-graal
-/app/micronaut-graalvm-helloworld: /usr/lib/libstdc++.so.6: no version information available (required by /app/micronaut-graalvm-helloworld)
-15:34:41.145 [main] INFO  io.micronaut.runtime.Micronaut - Startup completed in 56ms. Server Running: http://aa22eb808a30:8080
+$ docker run -p 8080:8080 micronaut-graalvm-helloworld:graalvm
+ __  __ _                                  _
+|  \/  (_) ___ _ __ ___  _ __   __ _ _   _| |_
+| |\/| | |/ __| '__/ _ \| '_ \ / _` | | | | __|
+| |  | | | (__| | | (_) | | | | (_| | |_| | |_
+|_|  |_|_|\___|_|  \___/|_| |_|\__,_|\__,_|\__|
+  Micronaut (v2.3.0)
+
+08:01:53.208 [main] INFO  io.micronaut.runtime.Micronaut - Startup completed in 64ms. Server Running: http://0d1168f199ff:8080
 ```
 
 ```bash
