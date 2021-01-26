@@ -33,7 +33,7 @@ FROM frolvlad/alpine-glibc
 ENV LD_LIBRARY_PATH=/usr/local/lib:/usr/glibc-compat/lib:/opt/libs/lib:/usr/lib:/lib:/lib64
 
 RUN apk -U upgrade \
-    && apk add libstdc++ bash
+    && apk add bash
 COPY --from=graalvm /tmp/ssl/ /
 ENV LD_LIBRARY_PATH /
 
